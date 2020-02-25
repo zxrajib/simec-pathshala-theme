@@ -1,0 +1,388 @@
+/*
+Theme Name: SIMEC Pathsala
+Theme URI: http://blogerhub.com/
+Author: zxrajib
+Author URI: 
+Description: Easy, Fast & Creative Blog
+Tags: left-sidebar, right-sidebar, post-formats, theme-options, translation-ready
+*/
+/******************  Common Style **********************/
+/*************** Default *************/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    line-height: 1.15;    
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    outline: 0;
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    {
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-size: 50px;
+    font-weight: 900;
+}
+h2{
+    font-weight: 900;
+    font-size: 40px;
+    color: #656565ff;
+}
+p{
+    font-size: 18px;
+    line-height: 25px;
+}
+/*************** Header *************/
+.header_sec{
+    background-image: url('assets/img/header_bg.png');
+    background-position: right top;
+    height: 1050px;
+    position: relative;
+}
+.header_content{
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    right: 0;
+}
+.header_sec .navbar-light .navbar-brand{
+    color:#ffffff
+}
+.header_inner_content{
+    max-width: 780px;
+    float: right;
+}
+.header_inner_content p{
+    margin-top:30px;
+}
+.header_inner_content ul li{
+    display: inline-block;
+}
+.header_inner_content ul {
+    margin: 60px 0 0;    
+}
+.header_inner_content ul li a img{
+    max-height: 50px;
+}
+.header_navbar{
+    padding: 20px 0;
+}
+.header_logo{
+    margin:50px 0;
+}
+.header_menu_ul{
+    text-align: right;
+    width:100%;
+}
+.header_menu_ul li{
+    display: inline-block;
+}
+.header_menu_ul li a{
+    color:#ffffff;
+}
+/*************** About us *************/
+.aboutus_sec{
+    background-image: url('assets/img/about_img.png');
+    background-repeat: no-repeat;
+    background-position: right center;   
+    position: relative;
+}
+.aboutus_sec::before{
+    position: absolute;
+    content:'';
+    background-image: url('assets/img/aboutus_bg.png');
+    background-position: left;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+.aboutus_sec_inner p{
+    font-size: 17px;
+    word-spacing: 0.5px;
+}
+.aboutus_sec.product_tour_about{
+    background-image: url('assets/img/11.png');
+    padding: 180px 0;
+}
+/*************** Feature *************/
+.feature_sec{
+    background-image: url('assets/img/feature_bg.png');
+    background-color: #f4f4f4;
+    padding: 100px 0;
+    
+}
+.feature_sec_inner{
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+}
+.feature_sec_inner::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+.feature_sec h4{
+    background-color: #f4f4f4;
+    padding: 19px 0;
+}
+.feature_sec_inner p{
+    padding: 20px;
+}
+.feature_sec_inner img{
+    float: right;
+    
+}
+/*************** Why Us *************/
+.why_us_sec{
+    background-image: url('assets/img/why_us_bg.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding: 80px 0;
+}
+.why_us_inner_sec{
+    display: block;
+    margin-top: 30px;
+}
+.why_us_inner_sec_img{
+    display: inline-block;
+    width: 75px;
+    vertical-align: top;
+}
+.why_us_inner_sec_img img{
+    max-width: 60px;
+}
+.why_us_inner_sec_content{
+    display: inline-block;
+    width: calc(100% - 80px);
+}
+/*************** Client *************/
+/*************** Contact *************/
+.contact_sec{
+    background-image: url('assets/img/contact_bg.png');
+    padding: 80px 0;
+}
+.contact_form{
+    margin-top: 50px;
+}
+.contact_form input[type=text], .contact_form input[type=email]{
+    padding: 10px;
+    display: block;
+    height: 60px;
+    border-radius: 10px;
+}
+.contact_form textarea{
+    min-height: 250px;
+}
+.submit_button{
+    font-size: 20px;
+    padding: 10px 30px;
+}
+/*************** Footer*************/
+.footer_sec{
+    background-image: url('assets/img/footer_bg.png');
+    padding: 100px 0 200px;
+    background-position: right top;
+}
+.footer_columnn h2{
+    font-size: 38px;
+    color: #ffffff;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+.footer_columnn p{
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 25px;
+}
+.sitemap_link ul li{
+    display: block;
+    margin-bottom: 15px;
+}
+.sitemap_link ul li a{
+    color:#ffffff;
+    font-size: 22px;
+}
+.social_sec ul li{
+    display: inline-block;
+}
+.social_sec ul li a{
+    display: block;
+}
+/*************** Price page *************/
+.price_sec{
+    padding: 200px 0;
+    background-position: right top;
+    background-repeat: no-repeat;
+    position: relative;
+}
+/* .price_sec::before{
+    position: absolute;
+    content:'';
+    background-image: url('assets/img/aboutus_bg.png');
+    background-position: left;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+} */
+/*************** Price Table *************/
+
+.price_table{
+    background-color: #ebebeb;
+    padding: 20px 15px;
+}
+.price_table_heading{
+    padding: 20px 0;
+    position: relative;
+}
+.price_table_heading::before{
+    position: absolute;
+    content:'';
+    background-image: url('assets/img/pricing-1-heading.png');
+    top: 0;
+    left: -38px;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100px;
+}
+.price_table_heading h2{
+    position: relative;
+}
+.price_table_heading h2 span{
+    font-size: 12px;
+    display: block;
+}
+.price_table .card{
+    background-image: url('assets/img/pricing1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color:#ffffff;
+    background-position: center;
+    border-radius: 15px;
+}
+.price_table .card .card-header{
+    margin: 30px 0;
+    text-align: center;
+}
+.price_table .card .card-header h4{
+    font-size: 30px;
+    font-weight: 900;
+}
+.price_table .card .card-body ul li{
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 18px;
+    position: relative;
+    padding-left: 30px;
+}
+.price_table .card .card-body ul li span{
+    position: absolute;
+    left: 0;
+}
+.buy_now_button{
+    background-color: #ffffff;
+    padding: 11px 40px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pricing_contact_sec{
+    padding: 80px 0;
+}
+/*************** product tour page *************/
+.product_features_cat_sec.right_sec{
+    background-image: url('assets/img/10.png');
+    background-repeat: no-repeat;
+    background-position: right bottom;  
+}
+.product_features_cat_sec.left_sec{
+    background-image: url('assets/img/09.png');
+    background-repeat: no-repeat;
+    background-position: left bottom;  
+}
+.product_features_cat_sec h2{
+    color: #656565ff;
+    margin-bottom: 30px;
+}
+.product_features_cat_sec h3{
+    color: #656565ff;
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.feature_cat{
+    text-align: center;
+    padding: 50px 0 30px;
+}
+.right_sec .vr_nav_tab_sec{
+    text-align: right;
+}
+.left_sec .vr_nav_tab_sec{
+    text-align: left;    
+}
+.vr_nav_tab_sec{
+    margin-bottom: 50px;
+}
+.nav_tab_sec{
+    display: inline-block;
+    position: relative;
+    padding: 30px 0;;
+}
+.nav_tab_sec::before{
+    position: absolute;
+    right:0;
+    content:'';
+    height: 100%;
+    top:0;
+    width:10px;
+    background-color: #37a2ff;
+    z-index: -1;
+}
+.left_sec .vr_nav_tab_sec .nav_tab_sec::before{
+    left:0;
+}
+.vr_nav_tab_sec .nav_tab_sec .nav-link{
+    color: #656565ff;
+    font-weight: 900;
+    font-size: 26px;
+}
+.vr_nav_tab_sec .nav_tab_sec .nav-link.active{
+    background-color: #37a2ff;
+    color:#ffffff;
+    font-size: 26px;
+}
+.vr_nav_tab_sec_content{
+    padding: 50px 0;
+}
