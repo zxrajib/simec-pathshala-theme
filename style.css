@@ -113,7 +113,7 @@ p{
 }
 /*************** About us *************/
 .aboutus_sec{
-    background-image: url('assets/img/about_img.png');
+    /* background-image: url('assets/img/about_img.png'); */
     background-repeat: no-repeat;
     background-position: right center;   
     position: relative;
@@ -126,6 +126,7 @@ p{
     background-size: contain;
     width: 100%;
     height: 100%;
+    bottom: 0;
     background-repeat: no-repeat;
 }
 .aboutus_sec_inner p{
@@ -192,6 +193,7 @@ p{
 .contact_sec{
     background-image: url('assets/img/contact_bg.png');
     padding: 80px 0;
+    background-position: center;
 }
 .contact_form{
     margin-top: 50px;
@@ -228,7 +230,6 @@ p{
 }
 .sitemap_link ul li{
     display: block;
-    margin-bottom: 15px;
 }
 .sitemap_link ul li a{
     color:#ffffff;
@@ -241,13 +242,24 @@ p{
     display: block;
 }
 /*************** Price page *************/
-.price_sec{
+.btn-outline-violet{
+    color: #eb68ff;
+}
+.btn-outline-violet:hover{
+    background-color: #eb68ff;
+    border-color: #eb68ff;
+    color:#ffffff;
+}
+.btn:hover{
+    color:#ffffff;
+}
+.price_sec{   
     padding: 200px 0;
     background-position: right top;
     background-repeat: no-repeat;
     position: relative;
 }
-/* .price_sec::before{
+.price_sec::before{
     position: absolute;
     content:'';
     background-image: url('assets/img/aboutus_bg.png');
@@ -255,13 +267,29 @@ p{
     background-size: contain;
     width: 100%;
     height: 100%;
+    bottom: 0;
     background-repeat: no-repeat;
-} */
+}
+.pricing_sec{
+    text-align: center;
+    padding: 80px 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.pricing_sec h2{
+    margin-bottom: 30px;;
+}
 /*************** Price Table *************/
-
+.pricing_full_sec{
+    background-image: url('assets/img/pricing_sec_bg.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+}
 .price_table{
     background-color: #ebebeb;
     padding: 20px 15px;
+    border-radius: 15px;
+    margin-bottom: 50px;
 }
 .price_table_heading{
     padding: 20px 0;
@@ -277,8 +305,21 @@ p{
     background-repeat: no-repeat;
     height: 100px;
 }
+.price_table_heading.p_small::before{
+    background-image: url('assets/img/pricing-2-heading.png');
+}
+.price_table_heading.p_mid::before{
+    background-image: url('assets/img/pricing-3-heading.png');
+}
+.price_table_heading.p_large::before{
+    background-image: url('assets/img/pricing-4-heading.png');
+}
 .price_table_heading h2{
     position: relative;
+    color: #ffffff;
+}
+.price_table_heading h2 .text-muted{
+    color: #ffffff !important;
 }
 .price_table_heading h2 span{
     font-size: 12px;
@@ -292,6 +333,16 @@ p{
     background-position: center;
     border-radius: 15px;
 }
+.price_table .card.p_small{
+    background-image: url('assets/img/pricing2.png');
+}
+.price_table .card.p_mid{
+    background-image: url('assets/img/pricing3.png');
+}
+.price_table .card.p_large{
+    background-image: url('assets/img/pricing4.png');
+}
+
 .price_table .card .card-header{
     margin: 30px 0;
     text-align: center;
@@ -320,6 +371,24 @@ p{
 
 .pricing_contact_sec{
     padding: 80px 0;
+}
+.pricing_contact_sec h5{
+    margin: 20px 0 60px;
+}
+.contact_us_button{
+    background-color: #37a2ff;
+    color: #ffffff;
+    padding: 30px 70px;
+    font-size: 30px;
+    font-weight: 900;
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid #37a2ff;
+}
+.contact_us_button:hover{
+    border: 1px solid #37a2ff;
+    background-color: transparent;
+    color: #37a2ff;
 }
 /*************** product tour page *************/
 .product_features_cat_sec.right_sec{
@@ -368,7 +437,7 @@ p{
     top:0;
     width:10px;
     background-color: #37a2ff;
-    z-index: -1;
+    z-index: 1;
 }
 .left_sec .vr_nav_tab_sec .nav_tab_sec::before{
     left:0;
@@ -385,4 +454,47 @@ p{
 }
 .vr_nav_tab_sec_content{
     padding: 50px 0;
+}
+
+@media (max-width: 1367px) {
+    .aboutus_sec {
+        background-size: 657px auto;
+    }
+    .why_us_sec {
+        background-size: 815px auto;
+    }
+}
+@media (max-width: 1199px) {
+    .header_inner_content {max-width: 100%;}
+    .aboutus_sec{background-image: none !important;}
+}
+
+@media (max-width: 991px) {
+    .why_us_sec{
+        position: relative;
+        color:#ffffff;
+    }
+    .why_us_sec::before {
+        position: absolute;
+        content: '';
+        background-color: rgba(0,0,0,0.7);
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    .contact_sec{
+        position: relative;
+        background-position: right;
+    }
+   .contact_sec::before {
+        position: absolute;
+        content: '';
+        background-color: rgba(0,0,0,0.7);
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+    .footer_sec {
+       background-image: none;
+        background-color: #37a2ff;
 }

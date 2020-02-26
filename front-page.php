@@ -1,25 +1,30 @@
 <?php get_header(); ?>
-    <section class="aboutus_sec" id="about">
+<?php
+    $var = ['pagename' => 'about-us'];
+    $service_page = new WP_Query($var);
+    while ($service_page->have_posts()) : $service_page->the_post();  
+    
+    $post_thumb_one = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');    
+?>
+    <section class="aboutus_sec" id="about" style="background-image: url('<?php echo $post_thumb_one[0];?>');">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="aboutus_sec_inner">
-                    <?php
-                        $var = ['pagename' => 'about-us'];
-                        $service_page = new WP_Query($var);
-                        while ($service_page->have_posts()) : $service_page->the_post();                   
-                    ?>
+                <div class="col-sm-12 col-lg-12 col-lg-6 col-xl-6">
+                    <div class="aboutus_sec_inner">                    
                         <h2><?php the_title(); ?></h2>
-                        <?php the_content(); ?>
-                    <?php
-                        endwhile;
-                        wp_reset_postdata();
-                    ?>
+                        <?php the_content(); ?>                    
                     </div>
+                </div>
+                <div class="col-lg-12 d-xl-none">
+                    <img class="img-fluid" src="<?php echo $post_thumb_one[0];?>" alt="">
                 </div>
             </div>
         </div>
     </section>
+<?php
+    endwhile;
+    wp_reset_postdata();
+?>
     <section class="feature_sec">
         <div class="container">
             <div class="row">
@@ -58,7 +63,7 @@
     <section class="why_us_sec">
        <div class="container">
            <div class="row">
-               <div class="col-md-6">
+               <div class="col-md-12 col-lg-6">
                     <div>
                     <?php
                         $var = ['pagename' => 'why-us'];
@@ -145,7 +150,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12 col-lg-6">
                     <div class="contact_form">
                         <form>
                             <div class="row mb-3">
